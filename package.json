@@ -1,0 +1,19 @@
+{
+  "name": "ritsu-security",
+  "version": "1.0.0",
+  "description": "Ritsu Server Moderation Bot",
+  "main": "index.js",
+  "author": {
+    "name": "FelipeSazz",
+    "email": "felipe@sazz.fail",
+    "url": "https://sazz.fail"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "discord.js": "^12.2.0",
+    "dotenv": "^8.2.0",
+    "mongoose": "^5.9.23",
+    "prettier": "^2.1.2"
+  }
+}
