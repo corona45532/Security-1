@@ -1,5 +1,5 @@
 const { Command } = require('../structures/Command')
-const parse = require("parse-duration")
+const parse = require('parse-duration')
 
 module.exports = class Mute extends Command {
   constructor(client) {
@@ -13,7 +13,8 @@ module.exports = class Mute extends Command {
   }
 
   async run({ message, args }) {
-    const member = message.mentions.users.first() || this.client.users.cache.get(args[0])
+    const member =
+      message.mentions.users.first() || this.client.users.cache.get(args[0])
     if (!member) return message.reply('Mention a user.')
     let time = args[1]
     if (!time) return message.reply('No duration specified.')
@@ -47,9 +48,7 @@ module.exports = class Mute extends Command {
       .member(member)
       .roles.add(role.id)
       .then(() => {
-        message.reply(
-          `<@${member.id}> has been successfully muted.`
-        )
+        message.reply(`<@${member.id}> has been successfully muted.`)
       })
     setTimeout(function () {
       message.guild.member(member).roles.remove(role.id)
