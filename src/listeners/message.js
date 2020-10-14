@@ -8,7 +8,10 @@ module.exports = class Message {
   async run(message) {
     if (message.author.bot) return
     if (!message.content.startsWith(this.client.prefix)) return
-    const args = message.content.slice(this.client.prefix.length).trim().split(/ +/g)
+    const args = message.content
+      .slice(this.client.prefix.length)
+      .trim()
+      .split(/ +/g)
     const command = args.shift().toLowerCase()
     const fancyCommand = this.client.commands.get(command)
     if (!fancyCommand) return

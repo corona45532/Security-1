@@ -4,11 +4,7 @@ module.exports = class ready {
   }
   async run() {
     this.client.user.setActivity(
-      `${
-        process.env.VERSION === 'canary'
-          ? 'javascript'
-          : `support server`
-      }`
+      `${process.env.VERSION === 'canary' ? 'javascript' : `support server`}`
     )
   }
 }
